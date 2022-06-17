@@ -1,19 +1,35 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .App {
   text-align: center;
   font-family: "Gotham Pro", sans-serif;
 }
 
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100vw;
-  height: 90vh;
+  height: 80vh;
   background-color: #05004E;
+  color: #FFCCCC;
+  padding: 0 10vw;
+}
+
+header {
+  background-color: #05004E;
+  width: 100vw;
+  padding: 2vh 10vw;
+  font-size: 18pt;
+  text-transform: uppercase;
+  z-index: 1;
+  color: #FFCCCC;
+
   a {
     text-decoration: none;
     color: #FFCCCC;
@@ -26,15 +42,6 @@
       color: white;
     }
   }
-  color: #FFCCCC;
-}
-
-header {
-  padding: 2vh 0;
-  width: 80%;
-  font-size: 18pt;
-  text-transform: uppercase;
-  z-index: 1;
 }
 
 nav {
@@ -45,32 +52,18 @@ nav {
     display: flex;
   }
 }
+.heading {
+  font-size: 40pt;
+  text-transform: uppercase;
+}
+
+.rightAlign {
+  text-align: right;
+  align-self: end;
+}
 
 li {
   list-style: none;
-}
-
-.line {
-  position: absolute;
-  border-radius: 10px;
-  height: 50px;
-  left: 0;
-  background-color: #FF0000;
-  transform: rotate(-45deg);
-  width: 80%;
-  z-index: 0;
-}
-#line1 {
-  top: 0;
-  animation: lineIn1 2s ease-in-out;
-}
-#line2 {
-  top: -200px;
-  animation: lineIn2 2s ease-in-out;
-}
-#line3 {
-  top: 200px;
-  animation: lineIn3 2s ease-in-out;
 }
 
 
@@ -99,5 +92,14 @@ li {
   }
   to {
     left: 0;
+  }
+}
+
+@media screen and (max-width: 900px ){
+  header {
+    font-size: 10pt;
+  }
+  .heading {
+    font-size: 13pt;
   }
 }

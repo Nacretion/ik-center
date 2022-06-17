@@ -3,20 +3,18 @@ import './App.scss';
 function App() {
     return (
         <div className="App">
+            <header>
+                <nav>
+                    <li><a href={"#line1"}>ik-Center</a></li>
+                    <div className={"distItem"}>
+                        <li><a href={"#line1"}>о нас</a></li>
+                        <li><a href={"#line1"}>портфолио</a></li>
+                        <li><a href={"#line1"}>заявка</a></li>
+                    </div>
+                </nav>
+            </header>
             <div className={"container"}>
-                <div className={"line"} id={"line1"}> </div>
-                <div className={"line"} id={"line2"}> </div>
-                <div className={"line"} id={"line3"}> </div>
-                <header>
-                    <nav>
-                        <li><a href={""}>ik-Center</a></li>
-                        <div className={"distItem"}>
-                            <li><a href={""}>о нас</a></li>
-                            <li><a href={""}>портфолио</a></li>
-                            <li><a href={""}>заявка</a></li>
-                        </div>
-                    </nav>
-                </header>
+                <p className={"heading rightAlign"}>студия разработки <br/> и внедрения digital-решений</p>
             </div>
         </div>
     );
