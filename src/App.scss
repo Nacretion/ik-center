@@ -3,9 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .App {
   text-align: center;
   font-family: "Gotham Pro", sans-serif;
+  background-color: #05004E;
 }
 
 
@@ -14,21 +16,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 80vh;
-  background-color: #05004E;
   color: #FFCCCC;
   padding: 0 10vw;
 }
 
 header {
-  background-color: #05004E;
-  width: 100vw;
+  width: 100%;
   padding: 2vh 10vw;
   font-size: 18pt;
   text-transform: uppercase;
   z-index: 1;
   color: #FFCCCC;
+
+  svg {
+    height: 18pt;
+    width: 18pt;
+    fill: red;
+    margin-bottom: -2px;
+  }
 
   a {
     text-decoration: none;
@@ -37,21 +44,24 @@ header {
     margin: 0 -.25rem;
     padding: 0 .25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-    &:hover {
-      box-shadow: inset 2rem 0 0 0 #FF0000;
-      color: white;
-    }
-  }
+
+    }.distItem a {&:hover {
+  box-shadow: inset 2rem 0 0 0 #FF0000;
+  color: white;
+}
+        }
 }
 
 nav {
   display: flex;
   justify-content: space-between;
+
   .distItem {
     gap: 5vw;
     display: flex;
   }
 }
+
 .heading {
   font-size: 40pt;
   text-transform: uppercase;
@@ -60,6 +70,14 @@ nav {
 .rightAlign {
   text-align: right;
   align-self: end;
+}
+.leftAlign {
+  text-align: left;
+  align-self: start;
+}
+.mainWord {
+  margin-top: 10px;
+  font-size: 68pt;
 }
 
 li {
@@ -76,6 +94,7 @@ li {
     left: 0;
   }
 }
+
 @keyframes lineIn2 {
   from {
     top: -1300px;
@@ -85,6 +104,7 @@ li {
     left: 0;
   }
 }
+
 @keyframes lineIn3 {
   from {
     top: -800px;
@@ -95,10 +115,18 @@ li {
   }
 }
 
-@media screen and (max-width: 900px ){
+@media screen and (max-width: 900px) {
   header {
     font-size: 10pt;
+
+    svg {
+      height: 10pt;
+      width: 10pt;
+      fill: red;
+      margin-bottom: -2px;
+    }
   }
+
   .heading {
     font-size: 13pt;
   }
